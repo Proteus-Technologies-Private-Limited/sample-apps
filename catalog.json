@@ -1,0 +1,38 @@
+{
+  "$schema": "./catalog.schema.json",
+  "version": 1,
+  "updated": "2026-09-22",
+  "applications": [
+    {
+      "id": "DMS_APP",
+      "name": "Document Management System",
+      "summary": "Controlled documents with an approval lifecycle, acknowledgement tracking and an AI assistant that answers from document content.",
+      "description": "A governed document management system. Two repositories — a general one for procedures and Ways of Working, and a deny-by-absence repository for regulated material that never surfaces in search, citations or assistant answers outside its rights matrix. Documents move through draft, review, approval and publication with insert-only version history, per-type retention and review clocks, and read-and-understood acknowledgement assigned by role or by named user. Readers report unclear or outdated content, periodic access-review campaigns capture their own evidence, and governance dashboards cover lifecycle, ownership, review freshness, approval turnaround, acknowledgement completion and assistant analytics.",
+      "category": "Governance & Compliance",
+      "icon": "folder_shared",
+      "theme_color": "#4caf50",
+      "repository": "https://github.com/Proteus-Technologies-Private-Limited/DMS_APP",
+      "import_ref": "Proteus-Technologies-Private-Limited/DMS_APP",
+      "branch": "main",
+      "tags": ["documents", "compliance", "approval workflow", "AI assistant", "dashboards", "audit"],
+      "features": [
+        "Two document repositories, one of them deny-by-absence for regulated material",
+        "Approval before publication, with insert-only version history",
+        "Retention and review clocks per document type, with a Legal-Hold override",
+        "Read-and-understood acknowledgement by role or named user, with due dates and exemptions",
+        "AI assistant over document content, with citations and six defined intents",
+        "Reader feedback and periodic access-review campaigns",
+        "Three governance dashboards over eighteen visuals"
+      ],
+      "objects": { "K": 2, "T": 3, "M": 2, "V": 18, "D": 3, "A": 1 },
+      "roles": [
+        "employee", "document-owner", "document-reviewer", "records-compliance",
+        "auditor", "information-security", "business-sponsor", "ai-product-owner",
+        "platform-admin"
+      ],
+      "requires": { "db_mode": "postgres", "biz_logic": "python", "ai_assistant": true },
+      "sample_data": true,
+      "published": "2026-09-22"
+    }
+  ]
+}

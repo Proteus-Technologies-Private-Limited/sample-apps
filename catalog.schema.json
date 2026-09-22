@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Twasta sample application catalog",
+  "type": "object",
+  "required": ["version", "applications"],
+  "properties": {
+    "version": { "type": "integer", "const": 1 },
+    "updated": { "type": "string", "format": "date" },
+    "applications": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "summary", "repository", "import_ref"],
+        "properties": {
+          "id":          { "type": "string", "description": "Repository name; becomes the imported project's name." },
+          "name":        { "type": "string", "description": "Human title shown on the gallery card." },
+          "summary":     { "type": "string", "description": "One sentence for the card." },
+          "description": { "type": "string", "description": "Full description for the detail view." },
+          "category":    { "type": "string" },
+          "icon":        { "type": "string", "description": "Material icon name." },
+          "theme_color": { "type": "string" },
+          "repository":  { "type": "string", "format": "uri" },
+          "import_ref":  { "type": "string", "description": "owner/repo, what Twasta's git import takes." },
+          "branch":      { "type": "string", "default": "main" },
+          "tags":        { "type": "array", "items": { "type": "string" } },
+          "features":    { "type": "array", "items": { "type": "string" } },
+          "objects":     { "type": "object", "additionalProperties": { "type": "integer" } },
+          "roles":       { "type": "array", "items": { "type": "string" } },
+          "requires":    { "type": "object" },
+          "sample_data": { "type": "boolean" },
+          "published":   { "type": "string", "format": "date" }
+        }
+      }
+    }
+  }
+}
