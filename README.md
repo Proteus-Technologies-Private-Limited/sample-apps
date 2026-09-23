@@ -12,7 +12,7 @@ repository; [`catalog.json`](catalog.json) is the index that Twasta's
 
 | Application | What it is | Repository |
 |---|---|---|
-| **Document Management System** | Controlled documents with an approval lifecycle, acknowledgement tracking and an AI assistant that answers from document content. | [`DMS_APP`](https://github.com/Proteus-Technologies-Private-Limited/DMS_APP) |
+| **Document Management System** | One place for every document — policies, contracts, invoices, correspondence, project and technical files — with versioning, approval, retention, full-text search and an AI assistant. | [`DMS_APP`](https://github.com/Proteus-Technologies-Private-Limited/DMS_APP) |
 
 ## Importing one
 

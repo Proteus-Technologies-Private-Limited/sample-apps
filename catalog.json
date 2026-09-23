@@ -1,30 +1,30 @@
 {
   "$schema": "./catalog.schema.json",
   "version": 1,
-  "updated": "2026-09-22",
+  "updated": "2026-09-23",
   "applications": [
     {
       "id": "DMS_APP",
       "name": "Document Management System",
-      "summary": "Controlled documents with an approval lifecycle, acknowledgement tracking and an AI assistant that answers from document content.",
-      "description": "A governed document management system. Two repositories — a general one for procedures and Ways of Working, and a deny-by-absence repository for regulated material that never surfaces in search, citations or assistant answers outside its rights matrix. Documents move through draft, review, approval and publication with insert-only version history, per-type retention and review clocks, and read-and-understood acknowledgement assigned by role or by named user. Readers report unclear or outdated content, periodic access-review campaigns capture their own evidence, and governance dashboards cover lifecycle, ownership, review freshness, approval turnaround, acknowledgement completion and assistant analytics.",
-      "category": "Governance & Compliance",
+      "summary": "One place for every document — policies, contracts, invoices, correspondence, project and technical files — with versioning, approval, retention, full-text search and an AI assistant.",
+      "description": "A document management system for the whole organisation. Company Documents holds policies and procedures, contracts and agreements, invoices and financial records, correspondence, project and technical documents; Confidential Records holds employee records, legal and regulatory documents and board records behind deny-by-absence access. Each of the ten document types carries its own metadata and an automatic document number (CON-0001, FIN-0001, …), and documents file themselves by business area and year. Versions are insert-only with check-in/check-out, releases go through review and approval, and every type follows its own retention period and review cycle, with legal hold for confidential records. Find anything by metadata or full text, or ask the AI assistant, which answers from document content with citations and from the register itself. Dashboards show what is on file, how it is growing, contracts ending in the next 90 days and records due for disposal.",
+      "category": "Document Management",
       "icon": "folder_shared",
       "theme_color": "#4caf50",
       "repository": "https://github.com/Proteus-Technologies-Private-Limited/DMS_APP",
       "import_ref": "Proteus-Technologies-Private-Limited/DMS_APP",
       "branch": "main",
-      "tags": ["documents", "compliance", "approval workflow", "AI assistant", "dashboards", "audit"],
+      "tags": ["document management", "DMS", "records management", "contracts", "versioning", "approval workflow", "AI assistant", "dashboards"],
       "features": [
-        "Two document repositories, one of them deny-by-absence for regulated material",
-        "Approval before publication, with insert-only version history",
-        "Retention and review clocks per document type, with a Legal-Hold override",
-        "Read-and-understood acknowledgement by role or named user, with due dates and exemptions",
-        "AI assistant over document content, with citations and six defined intents",
-        "Reader feedback and periodic access-review campaigns",
-        "Three governance dashboards over eighteen visuals"
+        "Ten document types with their own metadata: policies, contracts, invoices, correspondence, project, technical and general documents, plus employee, legal and board records",
+        "Automatic document numbers and filing by business area and year",
+        "Insert-only version history, check-in/check-out, and approval before publication",
+        "Per-type retention and review schedules, with legal hold for confidential records",
+        "Metadata and full-text search, and an AI assistant that answers from document content with citations",
+        "Deny-by-absence Confidential Records with encrypted national IDs and redacted indexing",
+        "Four dashboards: overview, governance, acknowledgement and assistant analytics, including contracts ending in 90 days and records due for disposal"
       ],
-      "objects": { "K": 2, "T": 3, "M": 2, "V": 18, "D": 3, "A": 1 },
+      "objects": { "K": 2, "T": 3, "M": 2, "V": 24, "D": 4, "A": 1 },
       "roles": [
         "employee", "document-owner", "document-reviewer", "records-compliance",
         "auditor", "information-security", "business-sponsor", "ai-product-owner",
