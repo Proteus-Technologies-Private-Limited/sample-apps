@@ -1,7 +1,7 @@
 {
   "$schema": "./catalog.schema.json",
   "version": 1,
-  "updated": "2026-09-23",
+  "updated": "2026-09-24",
   "applications": [
     {
       "id": "DMS_APP",
@@ -33,6 +33,33 @@
       "requires": { "db_mode": "postgres", "biz_logic": "python", "ai_assistant": true },
       "sample_data": true,
       "published": "2026-09-22"
+    },
+    {
+      "id": "Support360",
+      "name": "Support360 — Support Ticketing",
+      "summary": "An internal support desk: employees raise tickets, agents work them through a controlled status flow, and every change lands in an audit log.",
+      "description": "A support ticketing platform for the whole organisation. Employees raise tickets with a category, priority and attachments; the ticket number and raiser are filled in automatically. Tickets move strictly forward — Open, Assigned, In Progress, Resolved, Closed — with each transition validated, resolution notes required before resolving, and only the raiser able to confirm-close or reopen. Agents work a queue of unassigned tickets and their own, assignment and reassignment run from a dedicated screen, and admins maintain the category, priority and agent masters and can manage every ticket. Every creation, assignment, status change, comment, attachment and edit writes an old-value/new-value entry to the ticket's activity log. Employee, Agent and Admin dashboards show open, unassigned and resolved-this-period counts, tickets by status and priority, and the status trend.",
+      "category": "Service Desk",
+      "icon": "support_agent",
+      "theme_color": "#2E7DD1",
+      "repository": "https://github.com/Proteus-Technologies-Private-Limited/Support360",
+      "import_ref": "Proteus-Technologies-Private-Limited/Support360",
+      "branch": "main",
+      "tags": ["helpdesk", "ticketing", "service desk", "support", "SLA", "audit trail", "dashboards"],
+      "features": [
+        "Raise tickets with category, priority and attachments; ticket number and raiser filled in automatically",
+        "Forward-only status flow Open → Assigned → In Progress → Resolved → Closed, validated at every step",
+        "Employees see only their own tickets and can confirm-close or reopen a resolved ticket",
+        "Agent ticket queue with start-progress, comments, attachments and resolve; separate assignment screen",
+        "Category, priority and agent masters with activate/deactivate and in-use delete protection",
+        "Activity log of every change with old value, new value and who made it",
+        "Employee, Agent and Admin dashboards with counts, breakdowns and status trends"
+      ],
+      "objects": { "T": 10, "M": 1, "V": 18, "D": 3, "A": 1 },
+      "roles": ["employee", "agent", "admin"],
+      "requires": { "db_mode": "postgres", "biz_logic": "python", "ai_assistant": false },
+      "sample_data": false,
+      "published": "2026-09-24"
     }
   ]
 }
