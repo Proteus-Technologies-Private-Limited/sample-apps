@@ -60,6 +60,33 @@
       "requires": { "db_mode": "postgres", "biz_logic": "python", "ai_assistant": false },
       "sample_data": false,
       "published": "2026-09-24"
+    },
+    {
+      "id": "Expense_Management",
+      "name": "Expense Management",
+      "summary": "Employees record expenses and trips, managers approve or reject them, and finance pays out what was approved — with an activity log of every decision.",
+      "description": "An expense management application for the whole organisation. Expense categories and payment methods are maintained as masters and retired by marking them inactive, never by deleting records in use. Employees record business trips (numbered TRIP-00001 onwards, Planned → Upcoming → Completed, closed only by the Close-trip action) and capture expenses with category, trip, payment method, amount and receipt, then submit them for approval. Approval rules route by category and amount range; the approver reviews each expense with its receipt and approves or rejects it, and a rejected expense returns to the employee to correct and resubmit. Approved expenses become payment-process records that finance settles, alongside budget and limitation records with their supporting documents. Every decision lands in an approval activity log, a printable PDF expense report is included, and dashboards analyse transactions, approvals and payments by status, category, payment method and approver.",
+      "category": "Finance",
+      "icon": "receipt_long",
+      "theme_color": "#1976D2",
+      "repository": "https://github.com/Proteus-Technologies-Private-Limited/Expense_Management",
+      "import_ref": "Proteus-Technologies-Private-Limited/Expense_Management",
+      "branch": "main",
+      "tags": ["expense management", "expenses", "reimbursement", "travel", "approval workflow", "finance", "audit trail", "dashboards"],
+      "features": [
+        "Expense category and payment method masters, retired by status instead of deletion",
+        "Business trips with auto-numbered IDs and a Planned → Upcoming → Completed → Closed lifecycle",
+        "Capture expenses with category, trip, payment method, amount and receipt, and submit them for approval",
+        "Approval rules by category and amount range; approve or reject with the receipt in view",
+        "Rejected expenses return to the employee to correct and resubmit",
+        "Finance payment processing of approved expenses, plus budget and limitation records",
+        "Approval activity log, a printable PDF expense report, and transaction, approval and payment dashboards"
+      ],
+      "objects": { "T": 23, "V": 45, "D": 10, "P": 2, "R": 1 },
+      "roles": ["employee", "manager", "finance", "administrator"],
+      "requires": { "db_mode": "postgres", "biz_logic": "python", "ai_assistant": false },
+      "sample_data": false,
+      "published": "2026-09-24"
     }
   ]
 }
